@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextSolutech | Innovate. Code. Transform.</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <div class="logo">NextSolutech</div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#academy">Academy</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="hero">
+  <div class="hero-content">
+    <h1 class="pt">NextSolutech</h1>
+    <p class="pt">Innovate. Code. Transform.</p>
+    <div class="btns">
+      <a href="#academy" class="btn">Join Academy</a>
+      <a href="#services" class="btn">Hire Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="fade">
+  <h2>About Us</h2>
+  <p>NextSolutech is a software company and tech academy that empowers the next generation of developers while delivering modern solutions for businesses.</p>
+  <p>Our vision is to build Africa’s leading tech solutions and learning platform.</p>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="fade">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">Web Development</div>
+    <div class="card">Mobile Apps</div>
+    <div class="card">Business Systems</div>
+    <div class="card">UI/UX Design</div>
+    <div class="card">IT Consultancy</div>
+  </div>
+</section>
+
+<!-- Academy Section -->
+<section id="academy" class="fade">
+  <h2>NextSolutech Academy</h2>
+  <p>Practical courses to make you job-ready:</p>
+  <ul>
+    <li>Web Development (HTML, CSS, JS, PHP)</li>
+    <li>Java & Desktop Apps</li>
+    <li>Mobile App Development (Android)</li>
+    <li>Database & SQL</li>
+  </ul>
+  <a href="#contact" class="btn">Enroll Now</a>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="fade">
+  <h2>Our Projects</h2>
+  <div class="projects">
+    <div class="project">SACCO Management System</div>
+    <div class="project">Hospital System</div>
+    <div class="project">School Portal</div>
+    <div class="project">Mobile Market App</div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="fade">
+  <h2>Contact Us</h2>
+  <form action="https://formsubmit.co/clintonatulinde@gmail.com" method="POST">
+    <label for="name">Your Name</label>
+    <input id="name" type="text" name="name" placeholder="Your Name" required>
+
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" placeholder="Email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+
+    <!-- Optional hidden fields -->
+    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+  </form>
+  <p>Email: info@nextsolutech.com | WhatsApp: +256 700355037</p>
+  <script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop default redirect
+    fetch(this.action, {
+      method: this.method,
+      body: new FormData(this)
+    }).then(() => {
+      window.location.reload(); // reload the page after sending
+    });
+  });
+</script>
+</section>
+
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 NextSolutech. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
